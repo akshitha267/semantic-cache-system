@@ -114,10 +114,23 @@ This mechanism allows the system to reuse results for semantically similar queri
 
 Accepts a natural language query and returns the most relevant document.
 
-Example request:
 
-```json
-{
-  "query": "space shuttle launch"
-}
+### GET /cache/stats
 
+Returns statistics about the semantic cache.
+
+
+### DELETE /cache
+
+Clears the semantic cache and resets statistics.
+
+---
+## Running the API
+
+Start the FastAPI server:
+
+uvicorn main:app --reload
+
+Open API documentation:
+
+http://127.0.0.1:8000/docs
